@@ -1,3 +1,6 @@
+html {
+  font-family: monospace;
+}
 header {
   padding: 10px 5px 10px 5px;
   border: solid #DEDEDE;
@@ -9,6 +12,7 @@ header {
 
 input {
   width: 75%;
+  margin-left: 10px;
 }
 
 div h1 {
@@ -36,6 +40,9 @@ li {
   border: solid #DEDEDE;
   display: flex;
   flex-flow: wrap;
+}
+h4 {
+  margin: 5px;
 }
 
 img {

@@ -1,15 +1,11 @@
 let list = document.querySelector('#list');
+const baseUrl = 'https://crossorigin.me/http://www.recipepuppy.com/api/?q=search-term';
 
-`<button onclick="myFunction()">Search</button>`
-function searchFun() {
-    var x = document.createElement("INPUT");
-    x.setAttribute("type", "search");
-    document.body.appendChild(x);
-}
+let button = document.querySelector("button").addEventListener("click", function(){
+  console.log();
+})
 
-
-
-fetch("https://crossorigin.me/http://www.recipepuppy.com/api")
+fetch(baseUrl)
 .then(
   function(response) {
 
@@ -31,3 +27,6 @@ fetch("https://crossorigin.me/http://www.recipepuppy.com/api")
     });
   }
 )
+function searchRecipes() {
+
+}
