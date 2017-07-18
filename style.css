@@ -11,6 +11,10 @@ input {
   width: 75%;
 }
 
+div h1 {
+  text-align: center;
+}
+
 #results {
   padding: 100px;
   display: flex;
@@ -18,13 +22,22 @@ input {
 }
 
 #container {
-  border-top: solid black;
+  border-top: solid #DEDEDE;
 }
 
-ul {
+#list {
   list-style: none;
-  border: solid black;
   display: flex;
   flex-flow: wrap;
   flex-basis: 10%;
+}
+
+li {
+  border: solid #DEDEDE;
+  display: flex;
+  flex-flow: wrap;
+}
+
+img {
+  height: 125px;
 }
