@@ -1,18 +1,21 @@
 html {
   font-family: monospace;
 }
-header {
+form {
   padding: 10px 5px 10px 5px;
   border: solid #DEDEDE;
   background-color: #DEDEDE;
   margin: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 input {
-  width: 75%;
-  margin-left: 10px;
+  width: 70%;
+}
+
+button {
+  width: 10%;
 }
 
 div h1 {
@@ -27,24 +30,28 @@ div h1 {
 
 #container {
   border-top: solid #DEDEDE;
+  padding: 10px;
 }
 
 #list {
   list-style: none;
   display: flex;
   flex-flow: wrap;
-  flex-basis: 10%;
+  justify-content: space-around;
 }
 
 li {
   border: solid #DEDEDE;
   display: flex;
   flex-flow: wrap;
+  width: 150px;
+  margin: 10px 30px;
 }
+
 h4 {
   margin: 5px;
 }
 
 img {
-  height: 125px;
+  width: 150px;
 }

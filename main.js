@@ -1,8 +1,12 @@
 let list = document.querySelector('#list');
-let baseUrl = 'https://crossorigin.me/http://www.recipepuppy.com/api/?q=beef';
+let baseUrl = 'https://crossorigin.me/http://www.recipepuppy.com/api/?q=search-term';
 
-document.querySelector("button").addEventListener("click", function(event){
+let search = document.querySelector("form")
+search.addEventListener("submit", function(event){
   event.preventDefault();
+
+  let searchTerm = event.target.querySelector("input").value;
+
   fetch(baseUrl)
   .then(
     function(response) {
@@ -25,9 +29,13 @@ document.querySelector("button").addEventListener("click", function(event){
           `
           li.innerHTML = template;
           list.appendChild(li);
-          // debugger
         });
       });
     }
   )
 })
+
+// TODO: onfocus event listeners onkeypress document.querySelector("input").value
+// TODO: add event listener ("focus", function(){})
+// TODO: ?q= whatever is in the search bar
+// TODO: URLsearchParams document.location.search.slice
