@@ -1,5 +1,8 @@
-header{
+header {
   padding: 10px 5px 10px 5px;
+  border: solid #DEDEDE;
+  background-color: #DEDEDE;
+  margin: 0;
   display: flex;
   justify-content: center;
 }
@@ -8,6 +11,20 @@ input {
   width: 75%;
 }
 
+#results {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
 #container {
-  
+  border-top: solid black;
+}
+
+ul {
+  list-style: none;
+  border: solid black;
+  display: flex;
+  flex-flow: wrap;
+  flex-basis: 10%;
 }
