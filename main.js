@@ -1,13 +1,14 @@
 let list = document.querySelector('#list');
-let baseUrl = 'https://crossorigin.me/http://www.recipepuppy.com/api/?q=search-term';
+let baseUrl = 'https://crossorigin.me/http://www.recipepuppy.com/api/';
 
 let search = document.querySelector("form")
 search.addEventListener("submit", function(event){
   event.preventDefault();
 
   let searchTerm = event.target.querySelector("input").value;
+  let userReq = baseUrl + "?q=" + searchTerm;
 
-  fetch(baseUrl)
+  fetch(userReq)
   .then(
     function(response) {
 
