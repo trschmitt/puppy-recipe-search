@@ -6,7 +6,7 @@ search.addEventListener("submit", function(event){
   event.preventDefault();
 
   let searchTerm = event.target.querySelector("input").value;
-  let userReq = baseUrl + "?q=" + searchTerm;
+  let userReq = `${baseUrl}?q=${searchTerm}`;
 
   fetch(userReq)
   .then(
@@ -18,19 +18,23 @@ search.addEventListener("submit", function(event){
 
       response.json().then(function(recipeData) {
         let results = recipeData.results;
+        let templateContainer = "";
+        let template = "";
         results.forEach(function(recipe) {
           let imageSrc = "http://via.placeholder.com/150x150"
           if (recipe.thumbnail !== "") {
             imageSrc = recipe.thumbnail;
           }
-          let li = document.createElement("li");
-          let template = `
-            <img src="${imageSrc}" alt="recipe-picture-not-found">
-            <a href="${recipe.href}"><h4>${recipe.title}</h4></a>
+          template = `
+            <li>
+              <img src="${imageSrc}" alt="recipe-picture-not-found">
+              <a href="${recipe.href}"><h4>${recipe.title}</h4></a>
+            </li>
           `
-          li.innerHTML = template;
-          list.appendChild(li);
+          templateContainer += template;
         });
+        searchTerm = "";
+        list.innerHTML = templateContainer;
       });
     }
   )
